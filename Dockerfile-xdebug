@@ -1,0 +1,4 @@
+ARG PHPVERSION
+FROM pecceg2/php-pdo:${PHPVERSION}
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
